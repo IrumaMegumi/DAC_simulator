@@ -4,7 +4,7 @@ warning('off', 'MATLAB:nchoosek:LargeCoefficient');
 parameter; 
 %根据配置决定是否添加额外押金
 if use_extra_deposit
-    p_s=p_s+extra_diposit;
+    p_s=p_s+extra_deposit;
 end
 
 Gemma=gemma(N-k,k);
