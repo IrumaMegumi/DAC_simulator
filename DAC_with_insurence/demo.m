@@ -2,7 +2,7 @@ clear;clc;
 %参数加载
 parameter;
 if use_extra_deposit
-    p_s=p_s+extra_diposit;
+    p_s=p_s+extra_deposit;
 end
 Gemma=gemma(N-k,k);
 constexpr_1=@(r) (p_s-p_w-epsilon)*( (r).^(k-1)*(1-r).^(N-k)-Gemma(r) );
