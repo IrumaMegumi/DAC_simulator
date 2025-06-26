@@ -5,6 +5,7 @@ Gemma=gemma(N-k,k);
 constexp=constexpr(N,k);
 
 p0_i=15;%初始贿赂值
+p0_star=calculate_p0_star(N,k,p_w,p_s,epsilon);
 P_s=(p_w+p0_i-p_s)/(p_s-p_w-epsilon);
 equ=P_s/(k*nchoosek(N - 1, k));
 f_target = @(r) -Gemma(r) + constexp(r) - equ;
