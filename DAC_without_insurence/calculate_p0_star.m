@@ -1,4 +1,4 @@
-function p0_star=calculate_p0_star(N,k,p_w,p_s,epsilon)
+function [p0_star,r]=calculate_p0_star(N,k,p_w,p_s,epsilon)
     %%求解r
     Gemma=gemma(N-k,k);
     constexpr_1=@(r)(1-r).^(N-k)*(r).^(k-1);

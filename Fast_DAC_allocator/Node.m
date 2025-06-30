@@ -52,8 +52,8 @@ classdef Node
         end
         
         function r_sol=calculate_p(obj)%计算节点的响应概率
-            p0_star=obj.calculate_p0_star();
             if obj.use_extra_deposit
+                p0_star=obj.calculate_p0_star();
                 %使用保险时计算响应概率
                 if obj.p0_i<obj.epsilon
                     r_sol=1;
