@@ -3,9 +3,9 @@
 clear;clc;
 warning('off', 'MATLAB:nchoosek:LargeCoefficient');
 num_node=100;%节点总数
-node_1=Node(num_node,2.5);%第一组节点，贿赂金为2.5
-node_2=Node(num_node,5);%第二组节点，贿赂金为5
-node_3=Node(num_node,7.5);%第三组节点，贿赂金为7.5
+node_1=Node(num_node,2.5,true,10000);%第一组节点，贿赂金为2.5
+node_2=Node(num_node,5,true,10000);%第二组节点，贿赂金为5
+node_3=Node(num_node,7.5,true,10000);%第三组节点，贿赂金为7.5
 k=node_1.k;
 p1=node_1.calculate_p();%2.5的节点响应的概率
 p2=node_2.calculate_p();%5的节点响应的概率

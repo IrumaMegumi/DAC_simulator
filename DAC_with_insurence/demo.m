@@ -7,7 +7,7 @@ end
 Gemma=gemma(N-k,k);
 constexpr_1=@(r) (p_s-p_w-epsilon)*( (r).^(k-1)*(1-r).^(N-k)-Gemma(r) );
 constexpr_2=@(r) v_f*r.^(k-1)*(1-r).^(N-k-1)/N;
-p0_i=10;%初始贿赂值
+p0_i=5;%初始贿赂值
 equ=(p_w+p0_i-p_s)/(k*nchoosek(N - 1, k));
 
 f_target=@(r) constexpr_1(r)+constexpr_2(r)-equ;
