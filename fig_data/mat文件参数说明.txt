@@ -1,0 +1,17 @@
+DAC_without_ins_1000_nodes.mat:节点数量1000，ps为12，epsilon为0.1
+DAC_without_ins_100_nodes.mat:节点数量100，ps为12，epsilon为0.1
+DAC_without_ins_ps_22.mat：节点数量1000，ps为22，epsilon为0.1
+DAC_without_ins_ps_32.mat：节点数量1000，ps为32，epsilon为0.1
+DAC_without_ins_epsilon_3.mat：节点数量1000，ps为12，epsilon为3
+DAC_without_ins_epsilon_5.mat：节点数量1000，ps为12，epsilon为5
+DAC_with_ins_pf_6000.mat：节点数量1000，epsilon为0.1，ps为12，文件价值6000，不使用extra_deposit
+DAC_with_ins_pf_10000.mat：节点数量1000，epsilon为0.1，ps为12，文件价值10000，不使用extra_deposit
+DAC_with_ins_pf_10000_use_extra.mat：节点数量1000，epsilon为0.1，ps为12，文件价值10000，使用extra_deposit
+allocator_data.mat：贿赂金为2.5,5,7.5时，系统未响应概率随着贿赂金为5的节点比例变化的数据。节点数量为1000，epsilon为0.1，p_s为12，文件价值有2k,5k,1w，使用extra_deposit
+DAC_without_ins_nodes_cmp.pdf：节点数量100和1000两组的对比结果图
+DAC_without_ins_ps_cmp.pdf：ps值为12,22,32的对比结果图
+DAC_without_ins_epsilon_cmp.pdf：epsilon值为0.1,3,的对比结果图
+DAC_with_ins_pf_cmp.pdf：文件价值为6000,10000的对比结果图
+DAC_with_ins_extra_cmp.pdf：有无额外押金的对比
+DAC_allocator.pdf：贿赂金为5的节点比例对系统未响应概率的影响
+备注：所有的图片我保存的格式全部为pdf矢量图（期刊投稿可能会明确要求图片dpi和矢量图格式）。如果师哥使用的是latex或overleaf写论文，可以很方便插入。
