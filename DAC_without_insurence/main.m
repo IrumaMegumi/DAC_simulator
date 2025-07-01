@@ -5,7 +5,7 @@ parameter;
 Gemma=gemma(N-k,k);
 constexp=constexpr(N,k);
 
-p0_vec = 1:0.01:35;
+p0_vec = epsilon+0.05:0.01:35;
 r_vec = zeros(size(p0_vec));   % 存储对应的r解
 
 for i = 1:length(p0_vec)
@@ -17,6 +17,7 @@ for i = 1:length(p0_vec)
     r_vec(i) = r_sol;
 end
 
+save("DAC_without_ins_100_Nodes.mat","r_vec","p0_vec")
 % 画图
 figure;
 plot(p0_vec, r_vec, 'LineWidth', 2);

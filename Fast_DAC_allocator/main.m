@@ -1,6 +1,6 @@
 clear;clc;
 warning('off', 'MATLAB:nchoosek:LargeCoefficient');
-num_node=900;%节点数量
+num_node=1000;%节点数量
 
 node_1=Node(num_node, 2.5, false, 0);   % 贿赂2.5的节点
 node_2=Node(num_node, 5, false, 0);   % 贿赂5的节点
@@ -45,6 +45,7 @@ p_lose_ins_1w=pLose_fast(num_node,p1_ins_1w,p2_ins_1w,p3_ins_1w,k);
 p_lose_ins_5k=pLose_fast(num_node,p1_ins_5k,p2_ins_5k,p3_ins_5k,k);
 p_lose_ins_2k=pLose_fast(num_node,p1_ins_2k,p2_ins_2k,p3_ins_2k,k);
 
+save("allocator_data.mat","n2_vec","p_lose","p_lose_ins_2k","p_lose_ins_5k","p_lose_ins_1w");
 %画图
 figure;
 plot(n2_vec, p_lose, '-', 'LineWidth', 2, 'MarkerSize', 8, 'Color', [0 0.4470 0.7410]);
