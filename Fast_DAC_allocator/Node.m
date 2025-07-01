@@ -30,6 +30,7 @@ classdef Node
                 obj.v_f=0;
                 obj.extra_deposit=0;
             end
+            obj.p_s=obj.p_s+obj.extra_deposit;
         end
 
         function p0_star=calculate_p0_star(obj)%计算概率转变的临界值

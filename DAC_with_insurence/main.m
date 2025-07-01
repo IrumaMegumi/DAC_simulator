@@ -11,7 +11,7 @@ Gemma=gemma(N-k,k);
 constexpr_1=@(r) (p_s-p_w-epsilon)*( (r).^(k-1)*(1-r).^(N-k)-Gemma(r) );
 constexpr_2=@(r) v_f*r.^(k-1)*(1-r).^(N-k-1)/N;
 
-p0_vec = 1:0.01:35;
+p0_vec = epsilon+0.05:0.01:35;
 r_vec = zeros(size(p0_vec));   % 存储对应的r解
 
 for i = 1:length(p0_vec)
@@ -21,7 +21,7 @@ for i = 1:length(p0_vec)
     r_sol = fzero(f_target, 0.5);
     r_vec(i) = r_sol;
 end
-
+save("DAC_with_ins_pf_10000_use_extra.mat","p0_vec","r_vec");
 % 画图
 figure;
 plot(p0_vec, r_vec, 'LineWidth', 2);
